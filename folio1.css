@@ -11,9 +11,9 @@
   --surface-3:   #141914;
   --border:      #1a221a;
   --border-hi:   #253025;
-  --text:        #ffffff;
-  --text-mid:    rgb(255, 255, 255);
-  --text-dim:    #b8b8b8;
+  --text:        #b8c8b4;
+  --text-mid:    #6a8a68;
+  --text-dim:    #344834;
   --accent:      #4aac52;
   --accent-dim:  rgba(74,172,82,.09);
   --accent-2:    #38c898;
@@ -54,7 +54,7 @@ body {
 .nav::-webkit-scrollbar-thumb { background: var(--border-hi); }
 
 .nav-id { margin-bottom: 2rem; padding-bottom: 1.4rem; border-bottom: 1px solid var(--border); }
-.nav-id-title { font-family: mono; font-size: .65rem; color: var(--text); letter-spacing: .04em; margin-bottom: .3rem; }
+.nav-id-title { font-family: var(--mono); font-size: .65rem; color: var(--text); letter-spacing: .04em; margin-bottom: .3rem; }
 .nav-id-sub { font-family: var(--mono); font-size: .52rem; color: var(--text-dim); letter-spacing: .08em; text-transform: uppercase; line-height: 1.9; }
 
 .nav-gl { font-family: var(--mono); font-size: .48rem; letter-spacing: .2em; text-transform: uppercase; color: var(--text-dim); margin: 1.3rem 0 .4rem .3rem; }
@@ -318,6 +318,47 @@ body {
   padding: .18rem .55rem; border-radius: 2rem;
 }
 .evo-tag.hi { color: var(--accent); border-color: rgba(74,172,82,.3); }
+
+/* ── REAL IMAGE / VIDEO SLOTS ─────────────────────── */
+
+/* Images fill the slot naturally, object-fit keeps them cropped */
+.ms-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* aspect-ratio is set by modifier classes below */
+}
+.ms-img--sq   { aspect-ratio: 1/1; }
+.ms-img--wide { aspect-ratio: 21/9; }
+/* Default (no modifier) = 16/9 */
+.ms > .ms-img:not(.ms-img--sq):not(.ms-img--wide) { aspect-ratio: 16/9; }
+
+/* Videos fill the slot, same pattern */
+.ms-video {
+  display: block;
+  width: 100%;
+  background: #020402;
+}
+.ms-video:not(.ms-video--sq):not(.ms-video--wide) { aspect-ratio: 16/9; }
+.ms-video--sq   { aspect-ratio: 1/1; }
+.ms-video--wide { aspect-ratio: 21/9; }
+
+/* Practitioner card photos */
+.pc-img-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+}
+
+/* Broken/missing image fallback — shows the alt text cleanly */
+.ms-img[src*="PLACEHOLDER"],
+.ms-video[src*="PLACEHOLDER"] {
+  background: var(--surface-3);
+  border: 1px dashed var(--border-hi);
+}
+.ms-img[src*="PLACEHOLDER"]::before { content: attr(alt); }
 
 /* ── FOOTER ───────────────────────────────────────── */
 .footer { background: var(--surface); border-top: 1px solid var(--border); padding: 2.2rem 3rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
