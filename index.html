@@ -9,8 +9,6 @@
 <link rel="stylesheet" href="folio1.css"/>
 
 <!--
-
-
   PLACEHOLDER NAMING KEY
   ───────────────────────────────────────────────────────────────
   cps-*          → Phase 1, CPS archival / first web-to-Unity experiment
@@ -29,8 +27,10 @@
   wk1-* wk2-*
   wk3-* wk4-*   → Weekly progress documentation
   mgmt-*         → Management / iteration evidence
-  ═══════════════════════════════════════════════════════════════
 -->
+
+<!-- PDF.js from CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 
 </head>
 <body>
@@ -39,7 +39,6 @@
 <nav class="nav">
   <div class="nav-id">
     <div class="nav-id-title">Studio 3 · Folio 01</div>
-  
   </div>
 
   <div class="nav-gl">Overview</div>
@@ -86,8 +85,6 @@
     <p class="hero-desc">
       To preface, this website is for archival purposes and documentation of conceptual evolution. It is a complementary guide for Folio 1, Studio 3. But also a recollection of how things came to be in anticipation of this major work. It's a living document and I don't expect it to be fully complete before submission.
     </p>
-
-    </div>
   </header>
 
 
@@ -105,11 +102,6 @@
           This project doesn't emerge from nowhere. It is the latest iteration in a continuous trajectory of making, each phase depositing something the next one draws on, building toward from a CPS archival experiment that first proved the web-to-Unity link, through the installation that grew out of it, through a detour that stress-tested the infrastructure at scale, and finally into the two-part series that pulls everything back together.
         </p>
 
-    <!--  <div class="guide">
-          <div class="guide-lbl">How to use this section</div>
-          <p>Write each phase as a practitioner would: what were you making, what were you learning, and how did it feed forward? This section is evidence for both Concept (the idea didn't arrive fully formed) and Field (a sustained, developing practice). Be specific about what each phase contributed technically and conceptually to where the work sits now.</p>
-        </div>-->
-
         <!-- TIMELINE -->
         <div class="evo">
 
@@ -125,8 +117,7 @@
               <div class="evo-phase-sub">Character, Place &amp; Simulation — first web-to-Unity experiment</div>
               <div class="evo-body">
                 <div class="entry">
-                  
-                  <p class="entry-ph">The CPS archival project was where the web-to-Unity link first materialised: a live connection between a browser-based front-end and a Unity environment. It was the technical proof-of-concept that everything which followed is built on. At this stage the infrastructure was the discovery; the content of the archive was secondary to the realisation that these two mediums could work in relation to one another, one needing the other to exist.</p>
+                  <p class="entry-ph">The CPS archival project was where the web-to-Unity link first materialised. A live connection between a browser-based front-end and a Unity environment. It was the technical proof-of-concept that everything which followed is built on. At this stage the infrastructure was the discovery, the content of the archive was secondary to the realisation that these two mediums could work in relation to one another, one needing the other to exist.</p>
                 </div>
               </div>
               <div class="evo-tags">
@@ -139,7 +130,7 @@
                 <button class="rf-btn">Afterthought</button>
                 <div class="rf-panel">
                   <div class="rf-panel-lbl">On Phase 1</div>
-                  <p class="rf-panel-ph">After many consultations with Chris Barker, what emerged out of that class was more-so the infranstructure and technique. The web-socket to Unity pipeline is the glue that holds all of these projects together. </p>
+                  <p class="rf-panel-ph">After many consultations with Chris Barker, what emerged out of that class was more-so the infrastructure and technique. The web-socket to Unity pipeline is the glue that holds all of these projects together.</p>
                 </div>
               </div>
             </div>
@@ -157,11 +148,9 @@
               <div class="evo-phase-sub">Professional Pre-Production — the infrastructure becomes the work</div>
               <div class="evo-body">
                 <div class="entry">
-                <!--  <div class="entry-lbl">📝 How the CPS experiment became an installation</div>-->
                   <p class="entry-ph">The infrastructure proved in CPS became the conceptual spine of Held, Instantaneously. Participants swiped fictional dating profiles on their phone browser, spawning NPCs that contributed to a digital terrarium displayed on screen. The surface-level veil was about dehumanisation in online dating. The deeper argument was that the swipe gesture carries weight, that there are consequences to those actions. It was a first attempt at magnifying the implication of the swipe.</p>
                 </div>
                 <div class="entry" style="margin-top:.9rem">
-          
                   <p class="entry-ph">A stress test at Abbotsford Convent (target audience 20–30yo) revealed that the gameplay loop was read as "intuitive", which proved Hjorth's findings about habitual behaviour, but it also exposed the central problem. Some people thought this was just a dating simulator. The critique was too fluent in the language of the thing it was critiquing that it disappeared into it. The veil had become the whole experience. This is the finding that drives everything that follows.</p>
                 </div>
               </div>
@@ -177,7 +166,7 @@
                 <button class="rf-btn">Afterthought</button>
                 <div class="rf-panel">
                   <div class="rf-panel-lbl">On Held, Instantaneously</div>
-                  <p class="rf-panel-ph">I think I felt a little embarrased when people asked me about my own dating experiences, that was when I decided I had to critique something about more conceptually overt.</p>
+                  <p class="rf-panel-ph">I think I felt a little embarrassed when people asked me about my own dating experiences, that was when I decided I had to critique something more conceptually overt.</p>
                 </div>
               </div>
             </div>
@@ -195,11 +184,9 @@
               <div class="evo-phase-sub">The half-step: a commissioned detour that stress-tested the pipeline</div>
               <div class="evo-body">
                 <div class="entry">
-        
                   <p class="entry-ph">The MediaPipe hand-tracking via Python UDP sidecar, the dual vertical displays, the flock/ASCII generative visual systems running in Unity HDRP. This became a pivot because I said yes to a commission that was non-RMIT. The issue arose when the curator told me this would have to be offline. I made a decision here, that I would stamp out a visual style for the works that would be carried over to a future version of the works, but make a hand-tracking interactive with the environment for the festival.</p>
                 </div>
                 <div class="entry" style="margin-top:.9rem">
-                
                   <p class="entry-ph">The pivot wasn't wasted. As I was working with the Python UDP sidecar, I used the webcam to detect whether a person's hand was present in front of the installation, to "activate" the installation. So before the person walked up to the works, they'd see an onboarding/instruction screen that dims out as soon as their hands are present in front of the webcam. I realised I can potentially use this to onboard users with the QR code as one of the feedback from Held, Instantaneously was that the onboarding wasn't clear enough for some.</p>
                 </div>
               </div>
@@ -230,14 +217,12 @@
             <div class="evo-content">
               <div class="evo-phase-tag">Phase 4 · Studio 3 Major Project</div>
               <div class="evo-phase-title">The Swipe-to-Reveal Series</div>
-              <div class="evo-phase-sub">Part I: Held, Instantaneously · Part II: Swipe 4 Colony </div>
+              <div class="evo-phase-sub">Part I: Held, Instantaneously · Part II: Swipe 4 Colony</div>
               <div class="evo-body">
                 <div class="entry">
-                 
-                  <p class="entry-ph">The Swipe-to-Reveal Series is a two-part response to what the first stress test revealed. Part I, Held, Instantaneously, is still a valid work. I wanted to honour that and have it serve as the introduction for the works to come. Part II, Swipe 4 Colony, shifts the veil from dating to addiction design and gambling mechanics, a subject that carries significantly more cultural unease and is harder to mistake for the real thing. </p>
+                  <p class="entry-ph">The Swipe-to-Reveal Series is a two-part response to what the first stress test revealed. Part I, Held, Instantaneously, is still a valid work. I wanted to honour that and have it serve as the introduction for the works to come. Part II, Swipe 4 Colony, shifts the veil from dating to addiction design and gambling mechanics, a subject that carries significantly more cultural unease and is harder to mistake for the real thing.</p>
                 </div>
                 <div class="entry" style="margin-top:.9rem">
-
                   <p class="entry-ph">The infrastructure is carried forward. The web-to-Unity link, the phone as the site of argument, the installation form. What's left behind is the assumption that the veil can be as convincing as the thing it critiques. The first stress test set the threshold, that if the work is too fluent in UX, if it feels too easy, it doesn't interrupt the habit. It needs to expose it instead. Swipe 4 Colony is an attempt to sit just past that threshold.</p>
                 </div>
               </div>
@@ -296,17 +281,14 @@
         </div>
 
         <div class="m2" style="margin-bottom:1.4rem">
-
           <div class="ms">
             <img src="media/liam.JPG" alt="Exhibition 1 documentation" class="ms-img" style="aspect-ratio:3/4"/>
             <div class="mc">Caption — name the exhibition and describe what the audience encounter revealed</div>
           </div>
-
           <div class="ms">
             <img src="media/held2.jpg" alt="Exhibition 2 documentation" class="ms-img" style="aspect-ratio:3/4"/>
             <div class="mc">Caption — name the exhibition and describe what was different the second time</div>
           </div>
-
         </div>
 
         <!-- ── Phase 3.5 visuals: Festival -->
@@ -322,8 +304,6 @@
             <div class="mc">The visual style is comprised of a dot matrix volume shader.</div>
           </div>
         </div>
-
-
 
         <!-- ── Phase 4 visuals: The series -->
         <div class="div">Phase 4 — The Swipe-to-Reveal Series</div>
@@ -345,10 +325,9 @@
               </div>
             </div>
           </div>
-          <div class="mc">Swipe 4 Colony. </div>
+          <div class="mc">Swipe 4 Colony.</div>
         </div>
 
-        <!-- SWAP: replace series-diagram.jpg with your filename (a diagram showing the two-part structure) -->
         <div class="ms">
           <img src="media/s4c.png" alt="Diagram showing the two-part series structure and how the works relate" class="ms-img"/>
           <div class="mc">Caption — how does this diagram articulate the relationship between Part I and the returned Held, Instantaneously?</div>
@@ -381,22 +360,27 @@
           </div>
         </div>
       </div>
+
       <div class="cv reveal">
-        <div class="div">Visual materials from pitch</div>
+        <div class="div">Pitch map — Week 1</div>
 
-        <!-- SWAP: replace pitch-sketch.jpg with your filename -->
-        <div class="ms">
-          <img src="media/PLACEHOLDER_pitch-sketch.jpg" alt="Initial sketch or diagram from pitch post" class="ms-img"/>
-          <div class="mc">Caption — what does this communicate about your initial vision?</div>
+        <!-- PDF VIEWER — pitch-map.pdf -->
+        <div class="pdf-viewer" id="pitch-pdf-viewer">
+          <div class="pdf-toolbar">
+            <button class="pdf-btn" id="pitch-zoom-out">− Zoom</button>
+            <span class="pdf-zoom-label" id="pitch-zoom-label">100%</span>
+            <button class="pdf-btn" id="pitch-zoom-in">+ Zoom</button>
+            <button class="pdf-btn" id="pitch-fit">Fit</button>
+          </div>
+          <div class="pdf-canvas-wrap" id="pitch-canvas-wrap">
+            <div class="pdf-canvas-inner" id="pitch-canvas-inner">
+              <canvas id="pitch-canvas"></canvas>
+            </div>
+          </div>
         </div>
+        <div class="mc" style="border-top:none;margin-top:.4rem">Pitch map — the conceptual landscape at Week 1. Zoom in to read the annotations.</div>
 
-        <!-- SWAP: replace pitch-mood.jpg with your filename -->
-        <div class="ms">
-          <img src="media/PLACEHOLDER_pitch-mood.jpg" alt="Mood or reference image from Week 1" class="ms-img"/>
-          <div class="mc">Caption — what does this communicate aesthetically or conceptually?</div>
-        </div>
-
-        <div class="reflect">
+        <div class="reflect" style="margin-top:.4rem">
           <button class="rf-btn">Afterthought</button>
           <div class="rf-panel">
             <div class="rf-panel-lbl">On these early images</div>
@@ -437,7 +421,6 @@
       <div class="cv reveal">
         <div class="div">Concept evolution — visual evidence</div>
 
-        <!-- SWAP: replace concept-map.jpg with your filename -->
         <div class="ms">
           <img src="media/PLACEHOLDER_concept-map.jpg" alt="Concept map or diagram" class="ms-img ms-img--sq"/>
           <div class="mc">Caption — walk through what this diagram is mapping and why these relationships matter to the work.</div>
@@ -445,19 +428,14 @@
 
         <div class="div" style="margin-top:.5rem">Before / after — concept artefacts</div>
         <div class="m2">
-
-          <!-- SWAP: replace concept-early.jpg with your filename -->
           <div class="ms">
             <img src="media/PLACEHOLDER_concept-early.jpg" alt="Early concept sketch from pitch phase" class="ms-img ms-img--sq"/>
             <div class="mc">Early concept — what was the original idea?</div>
           </div>
-
-          <!-- SWAP: replace concept-refined.jpg with your filename -->
           <div class="ms">
             <img src="media/PLACEHOLDER_concept-refined.jpg" alt="Refined concept diagram, current iteration" class="ms-img ms-img--sq"/>
             <div class="mc">Refined concept — what specifically changed?</div>
           </div>
-
         </div>
         <div class="reflect">
           <button class="rf-btn">Afterthought</button>
@@ -509,8 +487,6 @@
       <div class="cv reveal">
         <div class="div">Practitioner / work references</div>
         <div class="m2" style="margin-bottom:.6rem">
-
-          <!-- SWAP: replace field-ref-01.jpg with your filename -->
           <div class="pc">
             <div class="pc-img">
               <img src="media/PLACEHOLDER_field-ref-01.jpg" alt="Practitioner or work reference 1" class="pc-img-photo"/>
@@ -520,8 +496,6 @@
               <div class="pc-desc">[Name, title, year] — explain the connection in 2–3 sentences. What specifically do you take from or push against?</div>
             </div>
           </div>
-
-          <!-- SWAP: replace field-ref-02.jpg with your filename -->
           <div class="pc">
             <div class="pc-img">
               <img src="media/PLACEHOLDER_field-ref-02.jpg" alt="Practitioner or work reference 2" class="pc-img-photo"/>
@@ -531,10 +505,7 @@
               <div class="pc-desc">[Name, title, year] — what does this work prove is possible or necessary?</div>
             </div>
           </div>
-
         </div>
-
-        <!-- SWAP: replace field-ref-03.jpg with your filename -->
         <div class="pc">
           <div class="pc-img">
             <img src="media/PLACEHOLDER_field-ref-03.jpg" alt="Practitioner or work reference 3" class="pc-img-photo"/>
@@ -544,7 +515,6 @@
             <div class="pc-desc">[Name, title, year] — how does this work relate to or diverge from your approach? Specificity is everything here.</div>
           </div>
         </div>
-
         <div class="reflect">
           <button class="rf-btn">Afterthought</button>
           <div class="rf-panel">
@@ -617,13 +587,11 @@
           <div class="cn" style="text-align:center"><div class="cn-tag">Artefact Evidence</div><div class="cn-txt">Where this shows up in the prototype — see below</div></div>
         </div>
 
-        <!-- SWAP: replace theory-demo.mp4 with your video filename -->
         <div class="ms">
           <video src="media/PLACEHOLDER_theory-demo.mp4" class="ms-video" controls muted playsinline></video>
           <div class="mc">Caption — name which theoretical concept you're demonstrating. What would be different if the theory hadn't informed this choice?</div>
         </div>
 
-        <!-- SWAP: replace theory-annotated.jpg with your filename -->
         <div class="ms">
           <img src="media/PLACEHOLDER_theory-annotated.jpg" alt="Annotated screenshot pointing to theory-driven design choices" class="ms-img"/>
           <div class="mc">Caption — what is this image evidence of? Point to specific elements and name the theory behind them.</div>
@@ -670,33 +638,34 @@
       <div class="cv reveal">
         <div class="div">Prototype demo</div>
 
-        <!-- SWAP: replace proto-walkthrough.mp4 with your video filename -->
         <div class="ms">
-          <video src="media/PLACEHOLDER_proto-walkthrough.mp4" class="ms-video ms-video--wide" controls muted playsinline></video>
+          <div style="position:relative;width:100%;aspect-ratio:16/9">
+            <iframe
+              src="https://www.youtube.com/embed/2TGdlg7bdN4"
+              title="Swipe 4 Colony — Prototype Demo"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              style="position:absolute;top:0;left:0;width:100%;height:100%;display:block">
+            </iframe>
+          </div>
           <div class="mc">Caption — narrate what we're seeing. What interactions are demonstrated? What does this prove about viability?</div>
         </div>
 
         <div class="div" style="margin-top:.4rem">Annotated screenshots</div>
         <div class="m3">
-
-          <!-- SWAP: replace proto-interaction.jpg -->
           <div class="ms">
             <img src="media/PLACEHOLDER_proto-interaction.jpg" alt="Key interaction or UI state" class="ms-img ms-img--sq"/>
             <div class="mc">What design decision does this show?</div>
           </div>
-
-          <!-- SWAP: replace proto-system.jpg -->
           <div class="ms">
             <img src="media/PLACEHOLDER_proto-system.jpg" alt="Technical system or pipeline view" class="ms-img ms-img--sq"/>
             <div class="mc">What does this prove technically?</div>
           </div>
-
-          <!-- SWAP: replace proto-aesthetic.jpg -->
           <div class="ms">
             <img src="media/PLACEHOLDER_proto-aesthetic.jpg" alt="Visual and aesthetic direction" class="ms-img ms-img--sq"/>
             <div class="mc">How does this communicate look and feel?</div>
           </div>
-
         </div>
         <div class="reflect">
           <button class="rf-btn">Afterthought</button>
@@ -739,7 +708,6 @@
       <div class="cv reveal">
         <div class="div">System / technical architecture</div>
 
-        <!-- SWAP: replace tech-architecture.jpg with your filename -->
         <div class="ms">
           <img src="media/PLACEHOLDER_tech-architecture.jpg" alt="Technical architecture diagram showing system connections" class="ms-img ms-img--wide"/>
           <div class="mc">Caption — walk through the data flow and system relationships shown here.</div>
@@ -747,19 +715,14 @@
 
         <div class="div" style="margin-top:.4rem">Technical craft evidence</div>
         <div class="m2">
-
-          <!-- SWAP: replace tech-code.jpg with your filename -->
           <div class="ms">
             <img src="media/PLACEHOLDER_tech-code.jpg" alt="Code snippet or shader screenshot" class="ms-img"/>
             <div class="mc">Caption — what does this do and why does it matter to the experience?</div>
           </div>
-
-          <!-- SWAP: replace tech-output.jpg with your filename -->
           <div class="ms">
             <img src="media/PLACEHOLDER_tech-output.jpg" alt="Technical output in-engine or in-browser" class="ms-img"/>
             <div class="mc">Caption — what does this demonstrate about your command of the medium?</div>
           </div>
-
         </div>
         <div class="reflect">
           <button class="rf-btn">Afterthought</button>
@@ -802,34 +765,24 @@
       <div class="cv reveal">
         <div class="div">Visual / design language</div>
         <div class="m3" style="margin-bottom:.6rem">
-
-          <!-- SWAP: replace cohesion-moodboard.jpg -->
           <div class="ms">
             <img src="media/PLACEHOLDER_cohesion-moodboard.jpg" alt="Mood board and visual references" class="ms-img ms-img--sq"/>
             <div class="mc">What aesthetic territory does this establish?</div>
           </div>
-
-          <!-- SWAP: replace cohesion-palette.jpg -->
           <div class="ms">
             <img src="media/PLACEHOLDER_cohesion-palette.jpg" alt="Colour palette and typographic system" class="ms-img ms-img--sq"/>
             <div class="mc">Why these choices? How do they serve the concept?</div>
           </div>
-
-          <!-- SWAP: replace cohesion-applied.jpg -->
           <div class="ms">
             <img src="media/PLACEHOLDER_cohesion-applied.jpg" alt="Visual language applied in-project" class="ms-img ms-img--sq"/>
             <div class="mc">Point to elements that embody the design principles.</div>
           </div>
-
         </div>
         <div class="div">Most resolved section</div>
-
-        <!-- SWAP: replace cohesion-resolved.mp4 with your video filename -->
         <div class="ms">
           <video src="media/PLACEHOLDER_cohesion-resolved.mp4" class="ms-video" controls muted playsinline></video>
           <div class="mc">Caption — explain what makes this "resolved." How do concept, aesthetics, and interaction come together here specifically?</div>
         </div>
-
         <div class="reflect">
           <button class="rf-btn">Afterthought</button>
           <div class="rf-panel">
@@ -857,7 +810,6 @@
           <div class="wk-head">
             <div class="wk-n">Week 01</div>
             <div class="wk-t">Quick Pitch + Initial Exploration</div>
-            <!-- SWAP: replace YOUR_TEAMS_LINK_WEEK1 with the actual Teams URL -->
             <a href="YOUR_TEAMS_LINK_WEEK1" target="_blank" class="tl" style="margin-left:auto">View in Teams</a>
           </div>
           <div class="wk-body">
@@ -873,7 +825,6 @@
           <div class="wk-head">
             <div class="wk-n">Week 02</div>
             <div class="wk-t">Pre-Production Development</div>
-            <!-- SWAP: replace YOUR_TEAMS_LINK_WEEK2 -->
             <a href="YOUR_TEAMS_LINK_WEEK2" target="_blank" class="tl" style="margin-left:auto">View in Teams</a>
           </div>
           <div class="wk-body">
@@ -889,7 +840,6 @@
           <div class="wk-head">
             <div class="wk-n">Week 03</div>
             <div class="wk-t">Early Production + First Builds</div>
-            <!-- SWAP: replace YOUR_TEAMS_LINK_WEEK3 -->
             <a href="YOUR_TEAMS_LINK_WEEK3" target="_blank" class="tl" style="margin-left:auto">View in Teams</a>
           </div>
           <div class="wk-body">
@@ -905,7 +855,6 @@
           <div class="wk-head">
             <div class="wk-n">Week 04</div>
             <div class="wk-t">Prototype / Vertical Slice Completion</div>
-            <!-- SWAP: replace YOUR_TEAMS_LINK_WEEK4 -->
             <a href="YOUR_TEAMS_LINK_WEEK4" target="_blank" class="tl" style="margin-left:auto">View in Teams</a>
           </div>
           <div class="wk-body">
@@ -922,28 +871,24 @@
 
         <div class="div">Week 1 — visual documentation</div>
         <div class="m2" style="margin-bottom:1.2rem">
-          <!-- SWAP: replace wk1-01.jpg and wk1-02.jpg -->
           <div class="ms"><img src="media/PLACEHOLDER_wk1-01.jpg" alt="Week 1 documentation image" class="ms-img ms-img--sq"/><div class="mc">Caption</div></div>
           <div class="ms"><img src="media/PLACEHOLDER_wk1-02.jpg" alt="Week 1 documentation image" class="ms-img ms-img--sq"/><div class="mc">Caption</div></div>
         </div>
 
         <div class="div">Week 2 — visual documentation</div>
         <div class="m2" style="margin-bottom:1.2rem">
-          <!-- SWAP: replace wk2-01.jpg and wk2-02.jpg -->
           <div class="ms"><img src="media/PLACEHOLDER_wk2-01.jpg" alt="Week 2 documentation image" class="ms-img ms-img--sq"/><div class="mc">Caption</div></div>
           <div class="ms"><img src="media/PLACEHOLDER_wk2-02.jpg" alt="Week 2 documentation image" class="ms-img ms-img--sq"/><div class="mc">Caption</div></div>
         </div>
 
         <div class="div">Week 3 — visual documentation</div>
         <div class="m2" style="margin-bottom:1.2rem">
-          <!-- SWAP: replace wk3-01.jpg; wk3-recording is a video -->
           <div class="ms"><img src="media/PLACEHOLDER_wk3-01.jpg" alt="Week 3 documentation image" class="ms-img ms-img--sq"/><div class="mc">Caption</div></div>
           <div class="ms"><video src="media/PLACEHOLDER_wk3-recording.mp4" class="ms-video ms-video--sq" controls muted playsinline></video><div class="mc">Caption</div></div>
         </div>
 
         <div class="div">Week 4 — visual documentation</div>
         <div class="m2">
-          <!-- SWAP: replace wk4-demo.mp4 and wk4-01.jpg -->
           <div class="ms"><video src="media/PLACEHOLDER_wk4-demo.mp4" class="ms-video ms-video--sq" controls muted playsinline></video><div class="mc">Caption</div></div>
           <div class="ms"><img src="media/PLACEHOLDER_wk4-01.jpg" alt="Week 4 documentation image" class="ms-img ms-img--sq"/><div class="mc">Caption</div></div>
         </div>
@@ -988,7 +933,6 @@
       <div class="cv reveal">
         <div class="div">Production plan</div>
 
-        <!-- SWAP: replace mgmt-gantt.jpg with your filename (screenshot of timeline / Gantt) -->
         <div class="ms">
           <img src="media/PLACEHOLDER_mgmt-gantt.jpg" alt="Production timeline or Gantt chart" class="ms-img ms-img--wide"/>
           <div class="mc">Caption — note deviations from the original plan and what drove the changes.</div>
@@ -996,8 +940,6 @@
 
         <div class="div" style="margin-top:.4rem">Iteration — before / after</div>
         <div class="m2">
-
-          <!-- SWAP: replace mgmt-v1.jpg and mgmt-v2.jpg -->
           <div class="ms">
             <img src="media/PLACEHOLDER_mgmt-v1.jpg" alt="V1 — initial attempt" class="ms-img"/>
             <div class="mc">Describe what this is and why it wasn't working.</div>
@@ -1006,11 +948,10 @@
             <img src="media/PLACEHOLDER_mgmt-v2.jpg" alt="V2 — revised version" class="ms-img"/>
             <div class="mc">What changed and what did the iteration reveal?</div>
           </div>
-
         </div>
+
         <div class="div" style="margin-top:.4rem">Additional process evidence</div>
 
-        <!-- SWAP: replace mgmt-process.mp4 with your video filename (optional) -->
         <div class="ms">
           <video src="media/PLACEHOLDER_mgmt-process.mp4" class="ms-video" controls muted playsinline></video>
           <div class="mc">Caption — what does this document about your iterative process?</div>
@@ -1035,11 +976,188 @@
       Masters of Animation, Games &amp; Interactivity<br/>
       RMIT University, Melbourne · 2026
     </div>
-
   </footer>
 
 </main>
 
 <script src="folio1.js"></script>
+
+<!-- PDF VIEWER SCRIPT -->
+<script>
+(function () {
+  pdfjsLib.GlobalWorkerOptions.workerSrc =
+    'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+  const PDF_URL   = 'media/pitch-map.pdf';
+  const canvas    = document.getElementById('pitch-canvas');
+  const ctx       = canvas.getContext('2d');
+  const wrap      = document.getElementById('pitch-canvas-wrap');
+  const inner     = document.getElementById('pitch-canvas-inner');
+  const zoomLabel = document.getElementById('pitch-zoom-label');
+
+  let pdfPage   = null;
+  let baseScale = 1;    // scale the canvas was last rendered at
+  let cssScale  = 1;    // CSS multiplier on top of baseScale
+  let renderTimer = null;
+
+  function visualScale() { return baseScale * cssScale; }
+
+  function updateLabel() {
+    zoomLabel.textContent = Math.round(visualScale() * 100) + '%';
+  }
+
+  // Get current position of inner div
+  function getInnerPos() {
+    return {
+      x: parseFloat(inner.style.left) || 0,
+      y: parseFloat(inner.style.top)  || 0
+    };
+  }
+
+  // Apply CSS transform with given origin (in un-scaled canvas pixels)
+  function applyTransform(originX, originY) {
+    inner.style.transformOrigin = `${originX}px ${originY}px`;
+    inner.style.transform = `scale(${cssScale})`;
+    updateLabel();
+  }
+
+  // Re-render at correct resolution, preserving exactly what the viewport shows
+  function rerender() {
+    if (!pdfPage) return;
+
+    const targetScale = Math.min(Math.max(visualScale(), 0.15), 1.4);
+
+    // Snapshot at the exact moment the timer fires — captures any panning
+    // the user did after stopping the zoom wheel.
+    const wrapRect  = wrap.getBoundingClientRect();
+    const innerRect = inner.getBoundingClientRect();
+
+    const viewOriginX = (wrapRect.left - innerRect.left) / cssScale;
+    const viewOriginY = (wrapRect.top  - innerRect.top)  / cssScale;
+    const oldBase     = baseScale;
+
+    // Pre-calculate where inner needs to land after the render, in new pixels
+    const newX = viewOriginX * (targetScale / oldBase);
+    const newY = viewOriginY * (targetScale / oldBase);
+
+    const vp = pdfPage.getViewport({ scale: targetScale });
+    canvas.width  = vp.width;
+    canvas.height = vp.height;
+
+    // Commit the new position NOW — before the render promise resolves —
+    // so there is zero window where the old position is visible at new canvas size.
+    baseScale = targetScale;
+    cssScale  = 1;
+    inner.style.transform       = 'scale(1)';
+    inner.style.transformOrigin = 'top left';
+    inner.style.left = -newX + 'px';
+    inner.style.top  = -newY + 'px';
+    updateLabel();
+
+    pdfPage.render({ canvasContext: ctx, viewport: vp });
+  }
+
+  function zoom(delta, originX, originY) {
+    const next = Math.min(Math.max(visualScale() + delta, 0.15), 1.4);
+    cssScale = next / baseScale;
+    applyTransform(originX ?? 0, originY ?? 0);
+    clearTimeout(renderTimer);
+    renderTimer = setTimeout(rerender, 400);
+  }
+
+  function fitToWidth() {
+    if (!pdfPage) return;
+    clearTimeout(renderTimer);
+    const vp0 = pdfPage.getViewport({ scale: 1 });
+    const fit = (wrap.clientWidth - 2) / vp0.width;
+    baseScale = fit;
+    cssScale  = 1;
+    inner.style.transform      = 'scale(1)';
+    inner.style.transformOrigin = 'top left';
+    inner.style.left = '0';
+    inner.style.top  = '0';
+    const vp = pdfPage.getViewport({ scale: fit });
+    canvas.width  = vp.width;
+    canvas.height = vp.height;
+    pdfPage.render({ canvasContext: ctx, viewport: vp });
+    updateLabel();
+  }
+
+  pdfjsLib.getDocument(PDF_URL).promise.then(pdf => {
+    pdf.getPage(1).then(page => {
+      pdfPage = page;
+      fitToWidth();
+    });
+  }).catch(() => {
+    wrap.innerHTML = '<p style="font-family:var(--mono);font-size:.65rem;color:var(--text-dim);padding:2rem;text-align:center">pitch-map.pdf not found in media/ folder</p>';
+  });
+
+  document.getElementById('pitch-zoom-in').addEventListener('click', () => {
+    const r = wrap.getBoundingClientRect();
+    const ir = inner.getBoundingClientRect();
+    zoom(+0.2, (r.left + r.width/2 - ir.left) / cssScale,
+               (r.top  + r.height/2 - ir.top)  / cssScale);
+  });
+  document.getElementById('pitch-zoom-out').addEventListener('click', () => {
+    const r = wrap.getBoundingClientRect();
+    const ir = inner.getBoundingClientRect();
+    zoom(-0.2, (r.left + r.width/2 - ir.left) / cssScale,
+               (r.top  + r.height/2 - ir.top)  / cssScale);
+  });
+  document.getElementById('pitch-fit').addEventListener('click', fitToWidth);
+
+  wrap.addEventListener('wheel', e => {
+    e.preventDefault();
+    const ir = inner.getBoundingClientRect();
+    const originX = (e.clientX - ir.left) / cssScale;
+    const originY = (e.clientY - ir.top)  / cssScale;
+    zoom(e.deltaY < 0 ? +0.12 : -0.12, originX, originY);
+  }, { passive: false });
+
+  // Drag to pan with momentum (ice drag effect)
+  let dragging = false, ox, oy, il, it;
+  let velX = 0, velY = 0, lastX, lastY;
+  let dragRaf = null;
+
+  function runDragMomentum() {
+    if (Math.abs(velX) < 0.5 && Math.abs(velY) < 0.5) return;
+    il = parseFloat(inner.style.left) || 0;
+    it = parseFloat(inner.style.top)  || 0;
+    inner.style.left = (il + velX) + 'px';
+    inner.style.top  = (it + velY) + 'px';
+    velX *= 0.88;
+    velY *= 0.88;
+    dragRaf = requestAnimationFrame(runDragMomentum);
+  }
+
+  wrap.addEventListener('mousedown', e => {
+    dragging = true;
+    cancelAnimationFrame(dragRaf);
+    velX = 0; velY = 0;
+    ox = e.clientX; oy = e.clientY;
+    lastX = e.clientX; lastY = e.clientY;
+    il = parseFloat(inner.style.left) || 0;
+    it = parseFloat(inner.style.top)  || 0;
+    wrap.style.cursor = 'grabbing';
+  });
+  window.addEventListener('mouseup', () => {
+    if (!dragging) return;
+    dragging = false;
+    wrap.style.cursor = 'grab';
+    dragRaf = requestAnimationFrame(runDragMomentum);
+  });
+  wrap.addEventListener('mousemove', e => {
+    if (!dragging) return;
+    const dx = e.clientX - lastX;
+    const dy = e.clientY - lastY;
+    velX = dx; velY = dy; // track velocity as last frame delta
+    lastX = e.clientX; lastY = e.clientY;
+    inner.style.left = (il + e.clientX - ox) + 'px';
+    inner.style.top  = (it + e.clientY - oy) + 'px';
+  });
+
+})();
+</script>
+
 </body>
 </html>
