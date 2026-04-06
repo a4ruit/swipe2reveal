@@ -322,7 +322,7 @@ body {
   height: 100%;
   object-fit: cover;
 }
-.ms-img--sq   { aspect-ratio: 1/1; }
+.ms-img--sq   { aspect-ratio: 1/s.5; }
 .ms-img--wide { aspect-ratio: 21/9; }
 .ms > .ms-img:not(.ms-img--sq):not(.ms-img--wide) { aspect-ratio: 16/9; }
 
