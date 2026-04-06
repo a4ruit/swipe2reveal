@@ -9,12 +9,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
       if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'), i * 50);
+        setTimeout(() => entry.target.classList.add('visible'), i * 40);
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.05 });
+  }, {
+    rootMargin: '0px 0px -60px 0px', // trigger when element is 60px from bottom of viewport
+    threshold: 0
+  });
 
+  // Stagger siblings within the same section together
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
 

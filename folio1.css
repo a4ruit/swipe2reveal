@@ -419,7 +419,7 @@ body {
 .fc-item:last-child { border-right: none; }
 
 /* ── SCROLL REVEAL ────────────────────────────────── */
-.reveal { opacity: 0; transform: translateY(12px); transition: opacity .5s ease, transform .5s ease; }
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s cubic-bezier(.22,.6,.36,1), transform .7s cubic-bezier(.22,.6,.36,1); }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
 /* ── RESPONSIVE ───────────────────────────────────── */
